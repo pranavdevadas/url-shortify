@@ -1,0 +1,85 @@
+.navbar {
+    background-color: #ffffff62;
+    /* background-color: #ffffff; */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 130px;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar nav li {
+    margin-right: 20px;
+  }
+  
+  .navbar nav li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navbar .buttons button {
+    background-color: #ff0000a6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 105px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar nav {
+      display: none;
+    }
+  
+    .navbar .toggle-menu {
+      display: block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .navbar .toggle-menu:hover {
+      background-color: #0062cc;
+    }
+  
+    .navbar .toggle-menu:active {
+      background-color: #00509d;
+    }
+  
+    .navbar nav.active {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+    }
+  
+    .navbar nav.active ul {
+      flex-direction: column;
+    }
+  
+    .navbar nav.active li {
+      margin-bottom: 10px;
+    }
+  }
+
