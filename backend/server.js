@@ -18,7 +18,6 @@ const corsOptions = {
   credentials: true,
 };
 
-app.options('*', cors(corsOptions))
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -31,4 +30,4 @@ app.get("/", (req, res) => res.send("Server is ready"));
 app.use(notfound);
 app.use(errorHandler);
 
-app.listen(port, () => console.log(`Server running port ${port}`));
+app.listen(port, () => console.log(`Server running on port ${port}`));
