@@ -18,6 +18,11 @@ const corsOptions = {
   credentials: true,
 };
 
+app.use((req, res, next) => {
+  res.header({"Access-Control-Allow-Origin": "*"});
+  next();
+}) 
+
 app.options("*", (req, res) => {
   res.set("Access-Control-Allow-Origin", "https://url-shortify.vercel.app");
   res.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
