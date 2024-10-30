@@ -27,7 +27,7 @@ const shortenerController = {
       await newUrl.save();
       res
         .status(200)
-        .json({ shortUrl: `http://localhost:5000/api/users/${shortCode}` });
+        .json({ shortUrl: `https://urlshortify.site/api/users/${shortCode}` });
     } catch (error) {
       console.error(error);
     }
