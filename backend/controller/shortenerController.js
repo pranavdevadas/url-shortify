@@ -18,7 +18,7 @@ const shortenerController = {
       let existingUrl = await Url.findOne({ originalUrl: url });
       if (existingUrl) {
         return res.status(200).json({
-          shortUrl: `http://localhost:5000/api/users/${existingUrl.shortCode}`,
+          shortUrl: `https://urlshortify.site/api/users/${existingUrl.shortCode}`,
         });
       }
 
