@@ -1,4 +1,4 @@
-import path from "path";
+import cors from "cors";
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
@@ -11,6 +11,13 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 const app = express();
+
+const corsOptions = {
+  origin: 'https://url-shortify.vercel.app', 
+  credentials: true,
+};
+
+app.use(cors(corsOptions)); // Enable CORS
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
