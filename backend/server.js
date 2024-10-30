@@ -13,8 +13,12 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: 'https://url-shortify.vercel.app', 
-  methods: ['GET', 'POST'],
+  origin: [
+    "https://url-shortify.vercel.app",
+    "https://urlshortify.site",
+    "https://www.urlshortify.site",
+  ],
+  methods: ["GET", "POST"],
   credentials: true,
 };
 
@@ -30,4 +34,4 @@ app.get("/", (req, res) => res.send("Server is ready"));
 app.use(notfound);
 app.use(errorHandler);
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => console.log(`Server running port ${port}`));
