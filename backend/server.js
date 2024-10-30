@@ -13,11 +13,7 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: [
-    "https://url-shortify.vercel.app",
-    "https://urlshortify.site",
-    "https://www.urlshortify.site",
-  ],
+  origin: "https://url-shortify.vercel.app",
   methods: ["GET", "POST", "OPTIONS"],
   credentials: true,
 };
