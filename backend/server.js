@@ -14,6 +14,7 @@ const app = express();
 
 const corsOptions = {
   origin: 'https://url-shortify.vercel.app', 
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS', 'PUT'],
   credentials: true,
 };
 
